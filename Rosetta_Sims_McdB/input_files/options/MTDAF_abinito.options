@@ -1,0 +1,4 @@
+-parser:protocol /home/limcaoco/ATPase_project/input_files/rosettascripts/abinito.xml
+-parser:script_vars 9MERS=/home/limcaoco/ATPase_project/input_files/frags/MTDAF_frags.200.9mers 3MERS=/home/limcaoco/ATPase_project/input_files/frags/MTDAF_frags.200.3mers
+-corrections::restore_talaris_behavior true
+-overwrite

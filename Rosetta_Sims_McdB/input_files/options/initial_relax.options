@@ -1,0 +1,2 @@
+-parser:protocol /home/limcaoco/ATPase_project/input_files/rosettascripts/FastRelax.xml
+-overwrite

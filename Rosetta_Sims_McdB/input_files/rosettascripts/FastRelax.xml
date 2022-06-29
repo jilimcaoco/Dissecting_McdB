@@ -1,0 +1,25 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="all_atom" weights="ref2015_cart_cst.wts"/>
+	</SCOREFXNS>
+	<SIMPLE_METRICS>
+		<CompositeEnergyMetric name="comp_e" scorefxn="all_atom"/>
+		<TotalEnergyMetric name="total_e" scorefxn="all_atom"/>	
+	</SIMPLE_METRICS>
+	<MOVERS>
+		<AddConstraints name="add_constraints">
+			<CoordinateConstraintGenerator name="add_bb_const" ca_only="false" sidechain="false"/>
+		</AddConstraints>
+		<RemoveConstraints name="rm_constraints" constraint_generators="add_bb_const"/>
+		<FastRelax name="structure_relax" scorefxn="all_atom" bondangle="true" bondlength="true" cartesian="true" min_type="lbfgs_armijo_nonmonotone">
+			<MoveMap name="mm" bb="true" chi="true" jump="true"/>
+		</FastRelax>
+		<RunSimpleMetrics name="scoring_metrics" metrics="comp_e,total_e"/>
+	</MOVERS>
+	<PROTOCOLS>
+		<Add mover="add_constraints"/>
+		<Add mover="structure_relax"/>
+		<Add mover="rm_constraints"/>
+		<Add mover="scoring_metrics"/>
+	</PROTOCOLS>
+</ROSETTASCRIPTS>

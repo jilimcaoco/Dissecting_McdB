@@ -1,0 +1,96 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.08+release.cb1caba
+[COMMIT_DATE]: 2020-02-22T18:49:33.865989
+[APPLICATION]: /home/limcaoco/rosetta/rosetta3.12/main/source/bin/energy_based_clustering.default.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:l=/scratch/ave_root/ave0/limcaoco/flex_dock_MTDAF_McdA_01_12_2022/pdbs/top_1000_list -cluster:energy_based_clustering:cluster_by=bb_cartesian -cluster:energy_based_clustering:cluster_radius=3 -cluster:energy_based_clustering:silent_output
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(backtrace_string(int)+0x3a) [0x2b1d3ab521ba]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2b1d3fdf8531]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2b1d3fea0ec5]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::string const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType)+0x4d8) [0x2b1d3aab4f58]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_from_file(core::pose::Pose&, std::string const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType)+0x50) [0x2b1d3aab68f0]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_from_file(core::pose::Pose&, std::string const&, bool, core::import_pose::FileType)+0x3b) [0x2b1d3aab6adb]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_stream::PDBPoseInputStream::fill_pose(core::pose::Pose&, bool)+0x1ee) [0x2b1d3aa5959e]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_stream::MetaPoseInputStream::fill_pose(core::pose::Pose&, bool)+0x3b) [0x2b1d3aa5500b]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libprotocols_a.6.so(protocols::energy_based_clustering::EnergyBasedClusteringProtocol::do_initial_import_and_scoring(unsigned long&, double&, unsigned long&, core::pose::Pose&, protocols::cyclic_peptide::CycpepSymmetryFilter const&, utility::vector1<double, std::allocator<double> >&, utility::vector1<utility::vector1<double, std::allocator<double> >, std::allocator<utility::vector1<double, std::allocator<double> > > >&, utility::vector1<utility::vector1<numeric::xyzVector<double>, std::allocator<numeric::xyzVector<double> > >, std::allocator<utility::vector1<numeric::xyzVector<double>, std::allocator<numeric::xyzVector<double> > > > >&, utility::vector1<utility::vector1<double, std::allocator<double> >, std::allocator<utility::vector1<double, std::allocator<double> > > >&, utility::vector1<std::string, std::allocator<std::string> >&, utility::vector1<unsigned long, std::allocator<unsigned long> >&, utility::vector1<unsigned long, std::allocator<unsigned long> >&, utility::vector1<unsigned long, std::allocator<unsigned long> >&, std::shared_ptr<core::scoring::ScoreFunction>, utility::vector1<core::id::NamedAtomID, std::allocator<core::id::NamedAtomID> > const&) const+0xb1) [0x2b1d34a56a01]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libprotocols_a.6.so(protocols::energy_based_clustering::EnergyBasedClusteringProtocol::go()+0x553) [0x2b1d34a57dd3]
+/home/limcaoco/rosetta/rosetta3.12/main/source/bin/energy_based_clustering.default.linuxgccrelease() [0x40142f]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b1d41d6b555]
+/home/limcaoco/rosetta/rosetta3.12/main/source/bin/energy_based_clustering.default.linuxgccrelease() [0x401566]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 362
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "MTDAF_pep_McdA_10_30960112_0015.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2020.08+release.cb1caba
+[COMMIT_DATE]: 2020-02-22T18:49:33.865989
+[APPLICATION]: /home/limcaoco/rosetta/rosetta3.12/main/source/bin/energy_based_clustering.default.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-39)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:l=/scratch/ave_root/ave0/limcaoco/flex_dock_MTDAF_McdA_01_26_2022/pdbs/top_200_list -cluster:energy_based_clustering:cluster_by=bb_cartesian -cluster:energy_based_clustering:cluster_radius=3 -cluster:energy_based_clustering:silent_output
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(backtrace_string(int)+0x3a) [0x2b20de1f81ba]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libutility.so(utility::excn::Exception::Exception(char const*, int, std::string const&)+0x51) [0x2b20e349e531]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libutility.so(utility::exit(char const*, int, std::string const&, int)+0xa5) [0x2b20e3546ec5]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_from_file(core::pose::Pose&, core::chemical::ResidueTypeSet const&, std::string const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType)+0x4d8) [0x2b20de15af58]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_from_file(core::pose::Pose&, std::string const&, core::import_pose::ImportPoseOptions const&, bool, core::import_pose::FileType)+0x50) [0x2b20de15c8f0]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_from_file(core::pose::Pose&, std::string const&, bool, core::import_pose::FileType)+0x3b) [0x2b20de15cadb]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_stream::PDBPoseInputStream::fill_pose(core::pose::Pose&, bool)+0x1ee) [0x2b20de0ff59e]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libcore.6.so(core::import_pose::pose_stream::MetaPoseInputStream::fill_pose(core::pose::Pose&, bool)+0x3b) [0x2b20de0fb00b]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libprotocols_a.6.so(protocols::energy_based_clustering::EnergyBasedClusteringProtocol::do_initial_import_and_scoring(unsigned long&, double&, unsigned long&, core::pose::Pose&, protocols::cyclic_peptide::CycpepSymmetryFilter const&, utility::vector1<double, std::allocator<double> >&, utility::vector1<utility::vector1<double, std::allocator<double> >, std::allocator<utility::vector1<double, std::allocator<double> > > >&, utility::vector1<utility::vector1<numeric::xyzVector<double>, std::allocator<numeric::xyzVector<double> > >, std::allocator<utility::vector1<numeric::xyzVector<double>, std::allocator<numeric::xyzVector<double> > > > >&, utility::vector1<utility::vector1<double, std::allocator<double> >, std::allocator<utility::vector1<double, std::allocator<double> > > >&, utility::vector1<std::string, std::allocator<std::string> >&, utility::vector1<unsigned long, std::allocator<unsigned long> >&, utility::vector1<unsigned long, std::allocator<unsigned long> >&, utility::vector1<unsigned long, std::allocator<unsigned long> >&, std::shared_ptr<core::scoring::ScoreFunction>, utility::vector1<core::id::NamedAtomID, std::allocator<core::id::NamedAtomID> > const&) const+0xb1) [0x2b20d80fca01]
+/home/limcaoco/rosetta/rosetta3.12/main/source/build/src/release/linux/3.10/64/x86/gcc/4.8/default/libprotocols_a.6.so(protocols::energy_based_clustering::EnergyBasedClusteringProtocol::go()+0x553) [0x2b20d80fddd3]
+/home/limcaoco/rosetta/rosetta3.12/main/source/bin/energy_based_clustering.default.linuxgccrelease() [0x40142f]
+/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b20e5411555]
+/home/limcaoco/rosetta/rosetta3.12/main/source/bin/energy_based_clustering.default.linuxgccrelease() [0x401566]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 362
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "MTDAF_pep_McdA_2_64_31568825_0047"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+

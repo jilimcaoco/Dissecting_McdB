@@ -1,0 +1,15 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="centroid" weights="score3" patch="docking_cen.wts_patch"/>
+	</SCOREFXNS>
+	<MOVERS>
+		<FlexPepDock name="dock_pep" lowres_abinitio="True" scorefxn_lowres="centroid"/>
+		<FlexPepDock name="refine_pep" min_only="True"/>
+		<FlexPepDock name="score_pep" extra_scoring="True"/>
+	</MOVERS>
+	<PROTOCOLS>
+		<Add mover="dock_pep"/>
+		<Add mover="refine_pep"/>
+		<Add mover="score_pep"/>
+	</PROTOCOLS>
+</ROSETTASCRIPTS>

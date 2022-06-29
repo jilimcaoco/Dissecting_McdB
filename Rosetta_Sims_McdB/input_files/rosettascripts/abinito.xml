@@ -1,0 +1,13 @@
+<ROSETTASCRIPTS>
+	<SCOREFXNS>
+		<ScoreFunction name="standard" weights="talaris2014"/>
+	</SCOREFXNS>
+	<MOVERS>
+		<AbscriptMover name="abinitio" cycles="10">
+		  <Fragments large_frags="%%9MERS%%" small_frags="%%3MERS%%"/>
+		</AbscriptMover>
+	</MOVERS>
+	<PROTOCOLS>
+		<Add mover="abinitio"/>
+	</PROTOCOLS>
+</ROSETTASCRIPTS>

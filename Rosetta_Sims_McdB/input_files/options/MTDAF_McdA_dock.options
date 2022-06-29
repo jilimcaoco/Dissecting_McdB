@@ -1,0 +1,7 @@
+-parser:protocol /home/limcaoco/ATPase_project/input_files/rosettascripts/FlexPepDock.xml
+-in:file:frag9 /home/limcaoco/ATPase_project/input_files/frags/MTDAF_frags.200.9mers
+-in:file:frag3 /home/limcaoco/ATPase_project/input_files/frags/MTDAF_frags.200.3mers
+-score:weights ref2015
+-packing:ex1 True
+-packing:ex2aro True
+-overwrite

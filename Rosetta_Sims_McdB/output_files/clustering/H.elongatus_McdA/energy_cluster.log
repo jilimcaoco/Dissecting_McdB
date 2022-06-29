@@ -1,0 +1,17 @@
+
+ERROR: Cannot open file "MTDAF_pep_McdA_2_64_31568825_0047"
+ERROR:: Exit from: src/core/import_pose/import_pose.cc line: 362
+
+[ ERROR ]: Caught exception:
+
+
+File: src/core/import_pose/import_pose.cc:362
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "MTDAF_pep_McdA_2_64_31568825_0047"
+
+
+
+
+AN INTERNAL ERROR HAS OCCURED. PLEASE SEE THE CONTENTS OF ROSETTA_CRASH.log FOR DETAILS.
+
+

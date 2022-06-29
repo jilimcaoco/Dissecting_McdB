@@ -1,0 +1,7 @@
+-parser:protocol /home/limcaoco/ATPase_project/input_files/rosettascripts/copy_flex_ddG.xml 
+-restore_talaris_behavior
+-in:file:fullatom
+-ignore_unrecognized_res
+-ignore_zero_occupancy false
+-ex1
+-ex2
